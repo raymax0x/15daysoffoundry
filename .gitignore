@@ -1,0 +1,27 @@
+# Foundry / Solidity
+out/
+cache/
+broadcast/
+lib/
+# Hardhat/TypeChain (if used in any day)
+artifacts/
+typechain/
+# Node
+node_modules/
+yarn-error.log
+npm-debug.log
+# Environment
+.env
+.env.*
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+# Coverage
+coverage/
+# Misc builds
+build/
+dist/
+# Foundry session file
+forge-session.json
