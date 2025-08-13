@@ -46,7 +46,6 @@ contract TokenSwapTest is Test {
         assertEq(tokenA.balanceOf(address(tokenSwap)), 110 ether);
         assertEq(tokenB.balanceOf(address(tokenSwap)), 90 ether);
     }
-
     function test_swap_A_for_B_from_test_contract() public {
         uint256 swapAmount = 10 ether;
         console2.log("--- Starting test_swap_A_for_B ---");
@@ -77,6 +76,38 @@ contract TokenSwapTest is Test {
             finalUserBalanceB,
             initialUserBalanceB + swapAmount,
             "User Token B balance should increase"
+        );
+    }
+
+    function testFuzz_swap(uint256 amount) public {
+        // Get the available liquidity in the contract
+        uint256 liquidity = tokenA.balanceOf(address(tokenSwap));
+        console2.log("current liquidity", liquidity);
+        // Use vm.assume to only test with valid amounts
+        vm.assume(amount > 0 && amount <= liquidity);
+
+        uint256 initialUserBalanceA = tokenA.balanceOf(address(this));
+        uint256 initialUserBalanceB = tokenB.balanceOf(address(this));
+
+        // Perform the swap with the random amount
+        tokenSwap.swap(address(tokenA), amount);
+
+        // Check that balances changed correctly
+        assertEq(tokenA.balanceOf(address(this)), initialUserBalanceA - amount);
+        assertEq(tokenB.balanceOf(address(this)), initialUserBalanceB + amount);
+    }
+
+    function invariant_tokenBalances() public view {
+        // INVARIANT: The total supply of tokens A and B should never change.
+        assertEq(
+            tokenA.totalSupply(),
+            INITIAL_SUPPLY,
+            "Total Token A supply should be constant"
+        );
+        assertEq(
+            tokenB.totalSupply(),
+            INITIAL_SUPPLY,
+            "Total Token B supply should be constant"
         );
     }
 }
