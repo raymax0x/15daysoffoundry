@@ -1,0 +1,2 @@
+BatchOptimizedTest:test_BatchTransfer_Works() (gas: 134759)
+BatchTransferTest:test_BatchTransfer() (gas: 134941)
