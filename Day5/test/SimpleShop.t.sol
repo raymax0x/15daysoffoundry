@@ -31,12 +31,12 @@ import {SimpleShop} from "../src/SimpleShop.sol";
 //     function test_gas_addItem() public {
 //         vm.prank(owner);
 
-//         uint256 gasBefore = gasleft();
-//         console.log("gasBefore", gasBefore);
-//         shop.addItem("Apple ", 1 ether, 100);
+// uint256 gasBefore = gasleft();
+// console.log("gasBefore", gasBefore);
+// shop.addItem("Apple ", 1 ether, 100);
 
-//         uint256 gasUsed = gasBefore - gasleft();
-//         console.log("gas used for addItem", gasUsed);
+// uint256 gasUsed = gasBefore - gasleft();
+// console.log("gas used for addItem", gasUsed);
 //     }
 
 //     function test_gas_multiplePurchase() public {

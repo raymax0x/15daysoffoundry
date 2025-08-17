@@ -29,9 +29,13 @@ contract BatchTransferTest is Test {
         amounts[0] = 2 ether;
         amounts[1] = 2 ether;
         amounts[2] = 1 ether;
-
+        uint256 gasBefore = gasleft();
+        console.log("gasBefore", gasBefore);
         vm.prank(sender);
         bt.batchTransfer{value: 5 ether}(recipients, amounts);
+
+        uint256 gasUsed = gasBefore - gasleft();
+        console.log("gas used for batchTransfer", gasUsed);
 
         assertEq(recipient1.balance, 2 ether);
         assertEq(recipient2.balance, 2 ether);

@@ -29,7 +29,7 @@ contract BatchOptimizedTest is Test {
         recipients[1] = r2;
         recipients[2] = r3;
 
-        uint256[] memory amounts = new uint256[](3);
+        uint128[] memory amounts = new uint128[](3);
         amounts[0] = 2 ether;
         amounts[1] = 2 ether;
         amounts[2] = 1 ether;
