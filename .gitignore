@@ -2,7 +2,9 @@
 out/
 cache/
 broadcast/
-lib/
+# Individual day lib folders (use shared lib/ at root)
+Day*/lib/
+day*/lib/
 # Hardhat/TypeChain (if used in any day)
 artifacts/
 typechain/

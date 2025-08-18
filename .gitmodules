@@ -1,21 +1,6 @@
-[submodule "Day2/lib/forge-std"]
-	path = Day2/lib/forge-std
+[submodule "lib/forge-std"]
+	path = lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
-[submodule "Day3/lib/forge-std"]
-	path = Day3/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "day4/lib/forge-std"]
-	path = day4/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "Day4/lib/forge-std"]
-	path = Day4/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "Day4/lib/openzeppelin-contracts"]
-	path = Day4/lib/openzeppelin-contracts
+[submodule "lib/openzeppelin-contracts"]
+	path = lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
-[submodule "Day5/lib/forge-std"]
-	path = Day5/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
-[submodule "Day6/lib/forge-std"]
-	path = Day6/lib/forge-std
-	url = https://github.com/foundry-rs/forge-std
