@@ -6,12 +6,15 @@ import {VotingMovie} from "../src/VotingMovie.sol";
 
 contract VotingScript is Script {
     function run() public {
-        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
-        address voteContractAddress = vm.envAddress("VOTING_CONTRACT_ADDRESS");
         vm.startBroadcast();
+        // VotingMovie voteM = new VotingMovie();
+        // console.log("voteM", address(voteM));
+
+        uint256 deployerPrivateKey = vm.envUint("PRIVATE_KEY");
+        address voteContractAddress = vm.envAddress("CONTRACT_ADDRESS");
 
         VotingMovie voteM = VotingMovie(voteContractAddress);
-        console.log("contract deployed to:", address(voteM));
+        // console.log(" deployed to:", address(voteM));
 
         // Lets interact with our contract, log the movies
 

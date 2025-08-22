@@ -10,3 +10,12 @@
 [submodule "Day8/lib/forge-std"]
 	path = Day8/lib/forge-std
 	url = https://github.com/foundry-rs/forge-std
+[submodule "Day9/lib/forge-std"]
+	path = Day9/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day10/lib/forge-std"]
+	path = Day10/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
+[submodule "Day11/lib/forge-std"]
+	path = Day11/lib/forge-std
+	url = https://github.com/foundry-rs/forge-std
